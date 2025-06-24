@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculateur TVA Intracom FR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      max-width: 600px;
+      margin: auto;
+    }
+    input {
+      width: 100%;
+      padding: 0.5em;
+      margin-bottom: 1em;
+      font-size: 1em;
+    }
+    label {
+      font-weight: bold;
+    }
+    #debug {
+      background: #f8f8f8;
+      border: 1px solid #ccc;
+      padding: 1em;
+      font-family: monospace;
+      max-height: 200px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Calcul du numéro de TVA intracommunautaire</h1>
+
+  <label for="siren">SIREN (9 chiffres) :</label>
+  <input type="text" id="siren" maxlength="9" placeholder="ex: 732829320">
+
+  <label for="vat">TVA Intracom (généré) :</label>
+  <input type="text" id="vat" readonly placeholder="FRxx123456789">
+
+  <div id="debug">
+    <strong>🧪 Journal d'exécution :</strong><br>
+  </div>
+
+  <script src="calcul-tva.js"></script>
+</body>
+</html>

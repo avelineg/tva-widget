@@ -2,56 +2,28 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>TVA Intracom + Infos Siren</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vérification SIREN + TVA</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 2em;
-      max-width: 700px;
-      margin: auto;
-    }
-    input, button {
-      width: 100%;
-      padding: 0.6em;
-      margin: 0.5em 0 1em;
-      font-size: 1em;
-    }
-    button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    #result {
-      background: #f9f9f9;
-      border: 1px solid #ccc;
-      padding: 1em;
-      font-family: monospace;
-      white-space: pre-wrap;
-    }
+    body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 2em; }
+    input, button { width: 100%; padding: 0.6em; margin-bottom: 1em; }
+    pre { background: #f3f3f3; padding: 1em; overflow-x: auto; }
   </style>
 </head>
 <body>
 
-  <h1>🔎 Vérification d'entreprise & TVA Intracom</h1>
+<h2>🔍 Vérification d'entreprise</h2>
 
-  <label for="siren">SIREN (9 chiffres) :</label>
-  <input type="text" id="siren" maxlength="9" placeholder="ex : 732829320">
+<label>SIREN :</label>
+<input id="siren" maxlength="9" placeholder="Ex : 732829320">
 
-  <label for="vat">TVA Intracom (générée automatiquement) :</label>
-  <input type="text" id="vat" readonly placeholder="FRxx123456789">
+<label>TVA Intracom :</label>
+<input id="tva" readonly>
 
-  <button id="checkBtn">Vérifier les informations</button>
+<button id="btn">Vérifier</button>
 
-  <div id="result">
-    <strong>🧪 Résultat :</strong>
-  </div>
+<pre id="result">🧪 Résultat : </pre>
 
-  <script src="calcul-tva.js"></script>
+<script src="frontend.js"></script>
 
 </body>
 </html>
